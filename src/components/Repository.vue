@@ -36,7 +36,7 @@
 </template> -->
 
 <template>
-  <v-row no-gutters class="bg-surface-variant">
+  <v-row no-gutters class="bg-grey-darken-3">
     <v-col>
       <template v-slot:text>
         <v-text-field
@@ -49,7 +49,7 @@
         ></v-text-field>
       </template>
       <v-card
-        class="bg-surface-variant mx-auto my-8 pa-2 ma-2"
+        class="bg-grey-darken-4 mx-auto my-8 pa-2 ma-2"
         target="_blank"
         rel="noopener"
         elevation="16"
@@ -61,12 +61,15 @@
         <v-card-item>
           <RouterLink to="/repodetailsview"> {{ repo.name }} </RouterLink>
 
+          <v-card-subtitle> Visibility: {{ repo.visibility }}</v-card-subtitle>
+          <v-card-subtitle> Created at: {{ repo.created_at }}</v-card-subtitle>
+          <v-card-subtitle> Language: {{ repo.language }} </v-card-subtitle>
+          <v-card-subtitle>{{ repo.owner.login }}</v-card-subtitle>
           <!-- <v-c> {{ repo.html_url }} </router-link> -->
         </v-card-item>
-
-        <v-card-text>
-          {{ repo.language }}
-        </v-card-text>
+        <RouterLink to="/livesiteview"
+          ><v-card-text>{{ repo.html_url }}</v-card-text></RouterLink
+        >
       </v-card>
     </v-col>
   </v-row>
@@ -93,7 +96,7 @@ export default {
 <style>
 body {
   font:
-    20px/1.8 'Poppins',
+    30px/1.8 'Poppins',
     sans-serif !important;
 }
 

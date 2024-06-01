@@ -8,7 +8,7 @@
         elevation="16"
         max-width="90%"
       >
-        <v-card-text v-show="repositories">{{ repositories }}</v-card-text>
+        <v-card-text v-if="repositories">{{ repositories.id }}</v-card-text>
       </v-card>
     </v-col>
   </v-row>

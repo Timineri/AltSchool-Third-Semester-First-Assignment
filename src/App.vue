@@ -1,21 +1,18 @@
 <script>
-import PaginationBlock from './components/PaginationBlock.vue'
-import { RouterLink, RouterView } from 'vue-router'
-// import Repository from './components/Repository.vue'
+// import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
-    PaginationBlock
-    // Repository
+    NavBar
   }
 }
 </script>
 
 <template>
   <div id="app">
-    <!-- <Repository /> -->
+    <NavBar />
     <RouterView />
-    <PaginationBlock />
   </div>
 </template>
