@@ -13,7 +13,7 @@ const router = createRouter({
       component: RepoView
     },
     {
-      path: '/repodetailsview/',
+      path: '/repodetailsview/:id',
       name: 'RepoDetailsView',
       component: RepoDetailsView
     },

@@ -59,7 +59,7 @@
       >
         <v-tooltip activator="parent" location="bottom">{{ repo.name }}</v-tooltip>
         <v-card-item>
-          <RouterLink to="/repodetailsview"> {{ repo.name }} </RouterLink>
+          <RouterLink :to="`/repodetailsview/${repo.name}`"> {{ repo.name }} </RouterLink>
 
           <v-card-subtitle> Visibility: {{ repo.visibility }}</v-card-subtitle>
           <v-card-subtitle> Created at: {{ repo.created_at }}</v-card-subtitle>
@@ -67,9 +67,7 @@
           <v-card-subtitle>{{ repo.owner.login }}</v-card-subtitle>
           <!-- <v-c> {{ repo.html_url }} </router-link> -->
         </v-card-item>
-        <RouterLink to="/livesiteview"
-          ><v-card-text>{{ repo.html_url }}</v-card-text></RouterLink
-        >
+        <a :href="`https://github.com/timineri/${repo.name}`">{{ repo.html_url }}</a>
       </v-card>
     </v-col>
   </v-row>
